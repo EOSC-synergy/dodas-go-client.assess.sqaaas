@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/DODAS-TS/dodas-go-client git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-lavender-bloodhound.sh
-        container: qc.acc_trippy-indigo-drever
+        - /usr/bin/env sh .sqa/script.gloppy-ecru-stingray.sh
+        container: qc.acc_foggy-olive-quokka
   QC.Doc:
     repos:
       github.com/DODAS-TS/dodas-go-client find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-jade-mammoth.sh
-        container: qc.doc_shaggy-smalt-magpie
+        - /usr/bin/env sh .sqa/script.shaky-champagne-rat.sh
+        container: qc.doc_nerdy-khaki-bird
       github.com/DODAS-TS/dodas-go-client git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-asparagus-spoonbill.sh
-        container: qc.doc_snazzy-pear-oriole
+        - /usr/bin/env sh .sqa/script.zippy-carmine-chihuahua.sh
+        container: qc.doc_beady-bronze-flamingo
       github.com/DODAS-TS/dodas-go-client markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-orchid-heron.sh
-        container: qc.doc_stealthy-pumpkin-burmese
+        - /usr/bin/env sh .sqa/script.scaly-grey-ant.sh
+        container: qc.doc_foggy-cerise-caracal
   QC.Lic:
     repos:
       github.com/DODAS-TS/dodas-go-client licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-wisteria-bloodhound.sh
-        container: qc.lic_whiny-beige-leopard
+        - /usr/bin/env sh .sqa/script.foggy-viridian-loon.sh
+        container: qc.lic_goopy-teal-dalmatian
   QC.Sec:
     repos:
       github.com/DODAS-TS/dodas-go-client gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-rose-elephant.sh
-        container: qc.sec_snoopy-harlequin-lynx
+        - /usr/bin/env sh .sqa/script.cloudy-tomato-bat.sh
+        container: qc.sec_tacky-denim-beagle
   QC.Sty:
     repos:
       github.com/DODAS-TS/dodas-go-client hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-mustard-birman.sh
-        container: qc.sty_skimpy-orange-spider
+        - /usr/bin/env sh .sqa/script.muzzy-sangria-bloodhound.sh
+        container: qc.sty_seedy-chocolate-liger
       github.com/DODAS-TS/dodas-go-client jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-vermilion-discus.sh
-        container: qc.sty_trippy-lime-binturong
+        - /usr/bin/env sh .sqa/script.slaphappy-violet-alligator.sh
+        container: qc.sty_ugly-viridian-manatee
       github.com/DODAS-TS/dodas-go-client staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-sepia-weasel.sh
-        container: qc.sty_dorky-lavender-frise
+        - /usr/bin/env sh .sqa/script.gloppy-maroon-worm.sh
+        container: qc.sty_snippy-flax-harrier
   QC.Ver:
     repos:
       github.com/DODAS-TS/dodas-go-client get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-lilac-mayfly.sh
-        container: qc.ver_craggy-denim-angelfish
+        - /usr/bin/env sh .sqa/script.whiny-yellow-maltese.sh
+        container: qc.ver_beady-amaranth-quokka
 timeout: 5400
