@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/DODAS-TS/dodas-go-client:
+      branch: master
+      repo: https://github.com/DODAS-TS/dodas-go-client
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/DODAS-TS/dodas-go-client git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-lavender-bloodhound.sh
+        container: qc.acc_trippy-indigo-drever
+  QC.Doc:
+    repos:
+      github.com/DODAS-TS/dodas-go-client find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-jade-mammoth.sh
+        container: qc.doc_shaggy-smalt-magpie
+      github.com/DODAS-TS/dodas-go-client git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-asparagus-spoonbill.sh
+        container: qc.doc_snazzy-pear-oriole
+      github.com/DODAS-TS/dodas-go-client markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-orchid-heron.sh
+        container: qc.doc_stealthy-pumpkin-burmese
+  QC.Lic:
+    repos:
+      github.com/DODAS-TS/dodas-go-client licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-wisteria-bloodhound.sh
+        container: qc.lic_whiny-beige-leopard
+  QC.Sec:
+    repos:
+      github.com/DODAS-TS/dodas-go-client gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-rose-elephant.sh
+        container: qc.sec_snoopy-harlequin-lynx
+  QC.Sty:
+    repos:
+      github.com/DODAS-TS/dodas-go-client hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-mustard-birman.sh
+        container: qc.sty_skimpy-orange-spider
+      github.com/DODAS-TS/dodas-go-client jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-vermilion-discus.sh
+        container: qc.sty_trippy-lime-binturong
+      github.com/DODAS-TS/dodas-go-client staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-sepia-weasel.sh
+        container: qc.sty_dorky-lavender-frise
+  QC.Ver:
+    repos:
+      github.com/DODAS-TS/dodas-go-client get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-lilac-mayfly.sh
+        container: qc.ver_craggy-denim-angelfish
+timeout: 5400
